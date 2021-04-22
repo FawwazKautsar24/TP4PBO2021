@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>Jadwal Bola</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">JADWAL PERTANDINGAN BOLA SAYA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <br />
+  <br />
+
+  <div style="margin-left: 5%; margin-bottom: 50px;">
+    <form action="index.php" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tname">Tim-tim yang bertanding</label>
+          <input type="text" class="form-control" name="tname" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="ttanggal">Tanggal</label>
+          <input class="form-control" type="date" name="ttanggal" name="ttanggal" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdetail">Detail</label>
+          <textarea class="form-control" name="tdetail" rows="3" required></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tsupporter">Penonton</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tpenonton" id="tpenonton1" value="Dengan Penonton" />
+              <label class="form-check-label" for="tpenonton1">Dengan Penonton</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tpenonton" id="tpenonton2" value="Tanpa Penonton" />
+              <label class="form-check-label" for="tpenonton2">Tanpa Penonton</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tpriority">Tiket</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="ttiket" id="ttiket1" value="Reguler" />
+              <label class="form-check-label" for="ttiket1">Reguler</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="ttiket" id="ttiket2" value="VIP" />
+              <label class="form-check-label" for="ttiket2">VIP</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="ttiket" id="ttiket3" value="VVIP" />
+              <label class="form-check-label" for="ttiket3">VVIP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" name="add" class="btn btn-primary">Add</button>
+    </form>
+
+    <hr style="margin-left: -100px">
+
+    <button type="submit" name="tipe-urut" class="btn btn-secondary">RESET</button>
+    <button type="submit" name="tipe-urut1" class="btn btn-secondary">URUT_NAMA</button>
+    <button type="submit" name="tipe-urut2" class="btn btn-secondary">URUT_TANGGAL</button>
+    <button type="submit" name="tipe-urut3" class="btn btn-secondary">URUT_DETAIL</button>
+    <button type="submit" name="tipe-urut4" class="btn btn-secondary">URUT_TIKET</button>
+
+    <br><br>
+    
+
+    <!-- Tabel 1 - Task -->
+    <div style="display: inline-block; ">
+      <h3>Daftar Pertandingan</h3>
+      <!-- TABEL1 -->
+      <table align="left" border="1" cellpadding="5" style="text-align: center;">
+        <tr>
+          <th>No</th>
+          <th>Tim-tim yang bertanding</th>
+          <th>Tanggal</th>
+          <th style="width: 30%;">Detail</th>
+          <th>Penonton</th>
+          <th>Tiket</th>
+          <th>Dilaksanakan</th>
+          <th>Aksi</th>
+        </tr>
+        <tr>
+          <!-- DATA YG AKAN DIGANTI -->
+          DATA_TABEL
+        </tr>
+
+      </table>
+    </div>
+
+
+
+    
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
